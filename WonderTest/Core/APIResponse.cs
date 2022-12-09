@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameAnalytics.Enumerations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace GameAnalytics.Core
     public class APIResponse
     {
         public int StatusCode { get; set; } = APIResponseCodes.STATUSCODEOK;
-        public string StatusMessage { get; set; } = GameAnalytics.Constant.Constant.SuccessResponse;
+        public string StatusMessage { get; set; } = Constant.SuccessResponse;
 
         public object Response { get; set; }
         public APIResponse()

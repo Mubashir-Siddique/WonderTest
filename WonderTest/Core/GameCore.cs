@@ -86,13 +86,13 @@ namespace GameAnalytics.Core
 
         public APIResponse CreateUpdateGameData_Repository(GamesAnalytics model)
         {
-            var report = _iRepository.ExecuteQuery<GamesAnalytics>(model, GameAnalytics.Constant.Constant.SP_CreateUpdateGameData).FirstOrDefault();
+            var report = _iRepository.ExecuteQuery<GamesAnalytics>(model, Constant.SP_CreateUpdateGameData).FirstOrDefault();
             apirespone.Response = report;
             return apirespone;
         }
         public APIResponse GetGameAnalytics_Repository(GamesAnalytics model)
         {
-            var report = _iRepository.Search<GamesAnalytics>(model, GameAnalytics.Constant.Constant.SP_GetGameAnalytics).ToList();
+            var report = _iRepository.Search<GamesAnalytics>(model, Constant.SP_GetGameAnalytics).ToList();
             apirespone.Response = report;
             return apirespone;
         }
